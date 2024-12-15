@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipient Registration | Food Connector</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    
+    <div class="bg-primary text-white text-center py-5">
+        <h2>Register as a Recipient</h2>
+        <p>Join Food Connector and start receiving food donations for your organization.</p>
+    </div>
+
+    <div class="container py-5">
+        <h3 class="text-center mb-4">Create Your Recipient Account</h3>
+        <form action="{% url 'recipient-register-submit' %}" method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="organizationName" class="form-label">Organization Name</label>
+                <input type="text" class="form-control" id="organizationName" name="organizationName" placeholder="Enter your organization name" required>
+                <div class="invalid-feedback">Please provide your organization name.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <div class="invalid-feedback">Please provide your phone number.</div>
+            </div>
+
+            <!-- Address Fields -->
+            <h4 class="mt-4">Address Details</h4>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="streetNumber" class="form-label">Street Number</label>
+                    <input type="text" class="form-control" id="streetNumber" name="streetNumber" placeholder="Enter street number" required>
+                    <div class="invalid-feedback">Please provide a street number.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="streetName" class="form-label">Street Name</label>
+                    <input type="text" class="form-control" id="streetName" name="streetName" placeholder="Enter street name" required>
+                    <div class="invalid-feedback">Please provide a street name.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="town" class="form-label">Town</label>
+                    <input type="text" class="form-control" id="town" name="town" placeholder="Enter town" required>
+                    <div class="invalid-feedback">Please provide a town.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Enter city" required>
+                    <div class="invalid-feedback">Please provide a city.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="postalCode" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Enter postal code" required>
+                    <div class="invalid-feedback">Please provide a postal code.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="province" class="form-label">Province</label>
+                    <select id="province" name="province" class="form-select" required>
+                        <option value="" disabled selected>Select Province</option>
+                        <option value="Eastern Cape">Eastern Cape</option>
+                        <option value="Free State">Free State</option>
+                        <option value="Gauteng">Gauteng</option>
+                        <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                        <option value="Limpopo">Limpopo</option>
+                        <option value="Mpumalanga">Mpumalanga</option>
+                        <option value="North West">North West</option>
+                        <option value="Northern Cape">Northern Cape</option>
+                        <option value="Western Cape">Western Cape</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a province.</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" class="form-control" id="country" name="country" value="South Africa" readonly>
+            </div>
+
+            <!-- Organization Type -->
+            <div class="mb-3">
+                <label for="organizationType" class="form-label">Organization Type</label>
+                <select class="form-select" id="organizationType" name="organizationType" required>
+                    <option value="" disabled selected>Select your organization type</option>
+                    <option value="Non-profit">Non-profit</option>
+                    <option value="School">School</option>
+                    <option value="Faith-based organization">Faith-based organization</option>
+                    <option value="Homeless shelter">Homeless shelter</option>
+                    <option value="Food pantry">Food pantry</option>
+                </select>
+                <div class="invalid-feedback">Please select your organization type.</div>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter a strong password" required>
+                <div class="invalid-feedback">Please provide a password.</div>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+                <div class="invalid-feedback">Passwords must match.</div>
+            </div>
+
+            <!-- Submit -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+            </div>
+        </form>
+    </div>
+
+    {% include 'footer.html' %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+</html>

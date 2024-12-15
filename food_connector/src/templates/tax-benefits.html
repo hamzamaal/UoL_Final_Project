@@ -5,31 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tax Benefits | Food Connector</title>
     {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta name="description" content="Learn about the tax benefits of donating surplus food and resources in South Africa. Maximize your impact with Food Connector.">
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <h1 style="margin-left: 20px;">Food Connector</h1>
-        <nav>
-            <ul class="menu-bar">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'training' %}">Training & Safety</a></li>
-                <li><a href="{% url 'donors' %}">Donors</a></li>
-                <li><a href="{% url 'recipients' %}">Recipients</a></li>
-                <li><a href="{% url 'liabilities' %}">Legal Liabilities</a></li>
-                <li><a href="{% url 'tax-benefits' %}" class="active">Tax Benefits</a></li>
-                <li><a href="{% url 'services' %}">Services</a></li>
-                <li><a href="{% url 'privacy' %}">Privacy</a></li>
-                <li><a href="{% url 'terms' %}">Terms</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    {% include 'header.html' %}
 
     <!-- Hero Section -->
-    <div class="hero">
+    <div class="bg-primary text-white text-center py-5">
         <h2>Tax Benefits</h2>
         <p>Maximize your impact with the tax benefits of giving.</p>
     </div>
@@ -92,18 +77,12 @@
 
         <h3>Take Action</h3>
         <p>
-            Start donating today and make a difference in the lives of those in need. For more information on tax benefits, visit the <a href="https://www.sars.gov.za/">SARS website</a> or contact us directly.
+            Start donating today and make a difference in the lives of those in need. For more information on tax benefits, visit the <a href="https://www.sars.gov.za/" aria-label="Visit SARS website for tax benefit information">SARS website</a> or <a href="{% url 'contact' %}">contact us</a> directly.
         </p>
     </div>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Food Connector | <a href="mailto:support@foodconnector.com">support@foodconnector.com</a></p>
-        <p>Follow us on 
-            <a href="#">Facebook</a>, 
-            <a href="#">Twitter</a>, and 
-            <a href="#">Instagram</a>
-        </p>
-    </footer>
+    {% include 'footer.html' %}
+    
 </body>
 </html>

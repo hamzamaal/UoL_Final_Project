@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Food Connector</title>
+    <title>About | Food Connector</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
@@ -22,50 +22,39 @@
                 <li><a href="{% url 'services' %}">Services</a></li>
                 <li><a href="{% url 'privacy' %}">Privacy</a></li>
                 <li><a href="{% url 'terms' %}">Terms</a></li>
-                <li><a href="{% url 'contact' %}" class="active">Contact</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}"  class="active">About</a></li>  
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
-        <h2>Contact Us</h2>
-        <p>We're here to help with any questions or concerns you may have.</p>
+        <h2>About Us</h2>
+        <p>Our mission is to connect donors and recipients, reduce waste, and help communities thrive.</p>
     </div>
 
-    <!-- Content Section -->
-    <div class="section">
-        <h3>Get in Touch</h3>
+    <!-- About Content -->
+    <div class="section" id="about-content">
+        <h2>Who We Are</h2>
         <p>
-            Whether you're a donor, recipient, or simply curious about what we do, we’d love to hear from you. Reach out to us via the methods below, and we'll respond as soon as possible.
+            Food Connector is a platform that bridges the gap between food donors and community organizations. 
+            We work to eliminate food waste and ensure that surplus food gets to where it's needed most. 
+            Through technology, we help streamline the donation process, enabling donors to share resources and 
+            recipients to access them seamlessly.
         </p>
 
-        <h3>Email Us</h3>
+        <h2>Our Mission</h2>
         <p>
-            For general inquiries, please email us at: <a href="mailto:support@foodconnector.com">support@foodconnector.com</a>.
+            Our mission is to fight hunger, reduce food waste, and build stronger, healthier communities. 
+            We believe that no food should go to waste when it can make a difference in someone’s life.
         </p>
 
-        <h3>Call Us</h3>
-        <p>
-            Prefer to chat? Give us a call at: <strong>+27 (0)123 456 7890</strong>. Our team is available Monday through Friday, from 9 AM to 5 PM.
-        </p>
-
-        <h3>Visit Us</h3>
-        <p>
-            Our office is located at:<br>
-            <strong>123 Connector Lane</strong><br>
-            Johannesburg, South Africa
-        </p>
-
-        <h3>Social Media</h3>
-        <p>
-            Stay connected with us on social media for the latest updates, stories, and news:
-        </p>
+        <h2>How We Work</h2>
         <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li><strong>Donors:</strong> Share surplus food or resources with a few clicks.</li>
+            <li><strong>Non-Profits:</strong> Receive donations quickly and efficiently.</li>
+            <li><strong>Technology:</strong> Our platform uses smart matching algorithms to connect donors and recipients in real-time.</li>
         </ul>
     </div>
 

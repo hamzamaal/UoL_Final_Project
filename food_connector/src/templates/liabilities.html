@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Liabilities | Food Connector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'training' %}">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}">Donors</a></li>
+                <li><a href="{% url 'recipients' %}">Recipients</a></li>
+                <li><a href="{% url 'liabilities' %}" class="active">Legal Liabilities</a></li>
+                <li><a href="{% url 'tax-benefits' %}">Tax Benefits</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li><a href="{% url 'terms' %}">Terms</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Legal Liabilities</h2>
+        <p>Understand the legal framework around food donation and the right to food in South Africa.</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="section">
+        <h3>The Right to Food in South Africa</h3>
+        <p>
+            South Africa recognizes the <strong>right to food</strong> as a fundamental human right, enshrined in Section 27(1)(b) of the <strong>Constitution of South Africa</strong>. 
+            This provision obligates the state to take reasonable measures to ensure everyone has access to sufficient food and water.
+        </p>
+        <p>
+            Food donation plays a critical role in supporting this constitutional right by addressing hunger, reducing food waste, and promoting social justice.
+            Organizations and individuals involved in food donation align themselves with the broader goal of advancing food security for vulnerable populations.
+        </p>
+
+        <h3>Legal Protection for Donors</h3>
+        <p>
+            South African law does not have a specific "Good Samaritan Act," but existing frameworks provide protection for donors acting in good faith. Donors are encouraged to comply with food safety regulations and ethical standards to mitigate liability risks. Key protections include:
+        </p>
+        <ul>
+            <li>Donation of food that is safe for consumption at the time of transfer</li>
+            <li>Adherence to the <strong>Foodstuffs, Cosmetics, and Disinfectants Act</strong> to ensure food safety and proper labeling</li>
+            <li>Donation through reputable organizations, such as registered non-profits, to ensure accountability</li>
+        </ul>
+        <p>
+            Legal liability is unlikely if donors take reasonable steps to ensure food safety and donate with good intentions.
+        </p>
+
+        <h3>Obligations for Food Safety</h3>
+        <p>
+            While donors are encouraged to contribute surplus food, they must ensure compliance with food safety laws to protect recipients and avoid legal repercussions. Key obligations include:
+        </p>
+        <ul>
+            <li>Ensuring food is handled, stored, and transported hygienically</li>
+            <li>Checking expiry dates and labeling donated food appropriately</li>
+            <li>Providing accurate information on food ingredients, especially for perishable or allergenic items</li>
+        </ul>
+        <p>
+            Food Connector offers guidelines and training to help donors comply with these requirements, promoting safe and effective food donation practices.
+        </p>
+
+        <h3>Legal Framework Supporting Food Donations</h3>
+        <p>
+            Food donation in South Africa operates within the broader framework of laws and policies aimed at achieving food security and reducing waste. Key legal instruments include:
+        </p>
+        <ul>
+            <li><strong>Constitution of South Africa</strong> – Guarantees the right to sufficient food and water</li>
+            <li><strong>Foodstuffs, Cosmetics, and Disinfectants Act</strong> – Governs food safety and labeling standards</li>
+            <li><strong>Consumer Protection Act</strong> – Ensures transparency and safety in food transactions</li>
+            <li><strong>National Environmental Management: Waste Act</strong> – Encourages reduction of food waste through sustainable practices</li>
+        </ul>
+
+        <h3>How Food Connector Helps</h3>
+        <p>
+            Food Connector facilitates responsible food donation by:
+        </p>
+        <ul>
+            <li>Connecting donors with vetted non-profits and community organizations</li>
+            <li>Providing resources and training to ensure compliance with food safety laws</li>
+            <li>Offering transparent reporting mechanisms to track and showcase impact</li>
+        </ul>
+        <p>
+            By bridging the gap between surplus food and communities in need, Food Connector contributes to building a more equitable and sustainable food system.
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Food Connector | <a href="mailto:support@foodconnector.com">support@foodconnector.com</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, and 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

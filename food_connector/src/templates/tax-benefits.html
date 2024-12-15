@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Benefits | Food Connector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'training' %}">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}">Donors</a></li>
+                <li><a href="{% url 'recipients' %}">Recipients</a></li>
+                <li><a href="{% url 'liabilities' %}">Legal Liabilities</a></li>
+                <li><a href="{% url 'tax-benefits' %}" class="active">Tax Benefits</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li><a href="{% url 'terms' %}">Terms</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Tax Benefits</h2>
+        <p>Maximize your impact with the tax benefits of giving.</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="section">
+        <h3>Tax Benefits of Food Donation in South Africa</h3>
+        <p>
+            Donating surplus food or other resources can help your organization save on tax while addressing hunger and supporting vulnerable communities. In South Africa, Section 18A of the <strong>Income Tax Act</strong> allows donors to receive tax deductions for qualifying donations made to registered Public Benefit Organizations (PBOs).
+        </p>
+        
+        <h3>Eligibility for Tax Deductions</h3>
+        <p>
+            To qualify for a tax deduction, the following conditions must be met:
+        </p>
+        <ul>
+            <li>The donation must be made to a PBO or a qualifying institution approved by SARS.</li>
+            <li>The donation must be in cash or kind (e.g., food or other goods).</li>
+            <li>The PBO must issue a valid Section 18A certificate to the donor.</li>
+        </ul>
+        <p>
+            Donors can claim up to 10% of their taxable income for qualifying donations, helping to offset tax liabilities while contributing to social good.
+        </p>
+
+        <h3>Section 18A Certificate</h3>
+        <p>
+            A Section 18A certificate serves as proof of donation for tax purposes. It must include:
+        </p>
+        <ul>
+            <li>The name and PBO number of the recipient organization</li>
+            <li>The donor’s details</li>
+            <li>A description and value of the donation</li>
+            <li>A declaration that the donation is eligible for a tax deduction</li>
+        </ul>
+        <p>
+            Food Connector ensures that all recipient organizations are equipped to issue valid Section 18A certificates, simplifying the process for donors.
+        </p>
+
+        <h3>Additional Benefits for Companies</h3>
+        <p>
+            Beyond individual tax benefits, companies that donate food or other resources can also reduce their taxable income. Food donations align with Corporate Social Responsibility (CSR) initiatives, enhancing brand reputation and fostering goodwill within communities.
+        </p>
+        <p>
+            Companies that donate food can also benefit from reduced waste disposal costs, contributing to both environmental sustainability and financial savings.
+        </p>
+
+        <h3>How Food Connector Supports Donors</h3>
+        <p>
+            Food Connector simplifies the donation process while ensuring compliance with South African tax laws. Our platform:
+        </p>
+        <ul>
+            <li>Connects donors with eligible PBOs</li>
+            <li>Provides guidelines on how to donate responsibly</li>
+            <li>Ensures recipients issue Section 18A certificates</li>
+            <li>Offers reporting tools to track your impact</li>
+        </ul>
+        <p>
+            By donating through Food Connector, you can maximize the impact of your giving while taking advantage of available tax benefits.
+        </p>
+
+        <h3>Take Action</h3>
+        <p>
+            Start donating today and make a difference in the lives of those in need. For more information on tax benefits, visit the <a href="https://www.sars.gov.za/">SARS website</a> or contact us directly.
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Food Connector | <a href="mailto:support@foodconnector.com">support@foodconnector.com</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, and 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

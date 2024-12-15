@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donors | Food Connector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'training' %}">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}" class="active">Donors</a></li>
+                <li><a href="{% url 'recipients' %}">Recipients</a></li>
+                <li><a href="{% url 'liabilities' %}">Legal Liabilities</a></li>
+                <li><a href="{% url 'tax-benefits' %}">Tax Benefits</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li><a href="{% url 'terms' %}">Terms</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Food Donors</h2>
+        <p>Join the effort to reduce food waste and make a lasting impact.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="section" id="donors-content">
+        <h2>Why Donate Food?</h2>
+        <p>
+            Food donors play a crucial role in reducing food waste and helping communities in need. By donating surplus food, 
+            you not only minimize environmental impact but also support organizations working to feed the hungry.
+        </p>
+
+        <h3>What You Can Donate</h3>
+        <ul>
+            <li><strong>Fresh Produce:</strong> Fruits and vegetables in good condition.</li>
+            <li><strong>Packaged Foods:</strong> Unopened, non-expired packaged items.</li>
+            <li><strong>Prepared Foods:</strong> Safe, properly stored meals from restaurants or caterers.</li>
+            <li><strong>Baked Goods:</strong> Bread, pastries, and other baked products.</li>
+            <li><strong>Non-Perishables:</strong> Canned goods, grains, and dry foods.</li>
+        </ul>
+
+        <h3>How It Works</h3>
+        <p>
+            Donating food is simple and efficient with Food Connector:
+        </p>
+        <ul>
+            <li>List the food you wish to donate through our platform.</li

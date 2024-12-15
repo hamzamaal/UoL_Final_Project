@@ -1,14 +1,20 @@
 from django.urls import path
-# from views.donation_views import DonationView
-from src.views.views import home
-from src.views.donation_views import DonationView
-
-from src.views.user_views import users
+from src.views import views  # Ensure this is correctly imported
 
 urlpatterns = [
-    path('', home, name='home'),  # Main page
-    path('donations/', DonationView, name='donations'),  # Donation page
-    path('users/', users, name='users'),  # User management page
+    path('', views.home, name='home'),  # Home page
+    path('about/', views.about, name='about'),
+    path('training/', views.training, name='training'),
+    path('donors/', views.donors, name='donors'),
+    path('recipients/', views.recipients, name='recipients'),
+    path('get-started/', views.get_started, name='get-started'),  # Add this line
+    path('liabilities/', views.liabilities, name='liabilities'),
+    path('tax-benefits/', views.tax_benefits, name='tax-benefits'),
+    path('services/', views.services, name='services'),
+    path('contact/', views.contact, name='contact'),
+    path('privacy/', views.privacy, name='privacy'),
+    path('terms/', views.terms, name='terms'),
 ]
+
 
 

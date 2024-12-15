@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipients | Food Connector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'training' %}">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}">Donors</a></li>
+                <li><a href="{% url 'recipients' %}" class="active">Recipients</a></li>
+                <li><a href="{% url 'liabilities' %}">Legal Liabilities</a></li>
+                <li><a href="{% url 'tax-benefits' %}">Tax Benefits</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li><a href="{% url 'terms' %}">Terms</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Food Recipients</h2>
+        <p>Connect with food donors to support your organization and community.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="section" id="recipients-content">
+        <h2>Who Are the Recipients?</h2>
+        <p>
+            Recipients include non-profit organizations, food banks, shelters, and other charities that serve individuals and families in need.
+            Food Connector helps you access surplus food and resources quickly and efficiently.
+        </p>
+
+        <h3>How Food Connector Supports You</h3>
+        <ul>
+            <li><strong>Easy Access to Food Donations:</strong> Match with donors who have surplus food.</li>
+            <li><strong>Real-Time Matching:</strong> Our system connects you with nearby food donors in real time.</li>
+            <li><strong>Customized Solutions:</strong> Receive the types of food that meet your organization’s specific needs.</li>
+            <li><strong>Reduced Operational Costs:</strong> Save on food expenses and direct your funds to other vital programs.</li>
+        </ul>
+
+        <h3>How It Works</h3>
+        <ol>
+            <li>Register your organization on the Food Connector platform.</li>
+            <li>Receive notifications when donors list food donations nearby.</li>
+            <li>Coordinate directly with donors to collect the resources you need.</li>
+        </ol>
+
+        <h3>Who Can Register?</h3>
+        <p>
+            Organizations eligible to receive donations include:
+        </p>
+        <ul>
+            <li>Non-profits, charities, and food pantries</li>
+            <li>Homeless shelters</li>
+            <li>Schools and community centers</li>
+            <li>Faith-based organizations</li>
+        </ul>
+
+        <h3>Get Started</h3>
+        <p>
+            Ready to start receiving food donations? <a href="{% url 'get-started' %}">Register today</a> or 
+            <a href="{% url 'contact' %}">contact us</a> for more information on how Food Connector can support your mission.
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Food Connector | <a href="mailto:support@foodconnector.com">support@foodconnector.com</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, and 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

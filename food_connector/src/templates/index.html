@@ -4,111 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Connector</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            background-color: #f8a035;
-            color: white;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            text-align: center;
-            background-image: url('banner-image.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 20px;
-        }
-        .hero h2 {
-            font-size: 2.5em;
-            margin: 0 0 20px;
-        }
-        .hero button {
-            padding: 15px 30px;
-            background-color: #f8a035;
-            color: white;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-        .hero button:hover {
-            background-color: #e08b20;
-        }
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 1.2em;
-            margin: 0 auto 20px;
-            max-width: 600px;
-        }
-        .steps {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        .step {
-            width: 200px;
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        footer a {
-            color: #f8a035;
-            text-decoration: none;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
 </head>
 <body>
     <header>
-        <h1>Food Connector</h1>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
         <nav>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="impact.html">Impact</a>
-            <a href="contact.html">Contact</a>
-            <a href="donate-now.html" class="donate">Donate Now</a>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}"  class="active">Home</a></li>
+                <li><a href="{% url 'training' %}">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}">Donors</a></li>
+                <li><a href="{% url 'recipients' %}">Recipients</a></li>
+                <li><a href="{% url 'liabilities' %}">Legal Liabilities</a></li>
+                <li><a href="{% url 'tax-benefits' %}">Tax Benefits</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li><a href="{% url 'terms' %}">Terms</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
         </nav>
     </header>
+       
 
     <div class="hero">
         <h2>Connecting Donors to Non-Profits</h2>
         <p>Reduce waste, help communities, and make a real impact.</p>
-        <a href="get-started.html">
+        <a href="/get-started">
             <button>Get Started</button>
         </a>
     </div>

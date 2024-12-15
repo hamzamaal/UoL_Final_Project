@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | Food Connector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'training' %}">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}">Donors</a></li>
+                <li><a href="{% url 'recipients' %}">Recipients</a></li>
+                <li><a href="{% url 'get-started' %}" class="active">Get Started</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Get Started</h2>
+        <p>Start your journey with Food Connector today!</p>
+    </div>
+
+    <div class="section">
+        <h3>How to Get Started</h3>
+        <p>
+            Register your organization or join as a donor to connect with communities in need. 
+            Let’s make a difference together!
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Food Connector | <a href="mailto:support@foodconnector.com">support@foodconnector.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Food Connector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'training' %}">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}">Donors</a></li>
+                <li><a href="{% url 'recipients' %}">Recipients</a></li>
+                <li><a href="{% url 'liabilities' %}">Legal Liabilities</a></li>
+                <li><a href="{% url 'tax-benefits' %}" class="active">Tax Benefits</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li><a href="{% url 'terms' %}">Terms</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Terms and Conditions</h2>
+        <p>Your use of Food Connector is subject to the terms outlined below.</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="section">
+        <h3>Acceptance of Terms</h3>
+        <p>
+            By accessing and using the Food Connector platform, you agree to comply with these terms and conditions.
+            These terms are governed by the laws of the Republic of South Africa.
+        </p>
+
+        <h3>Purpose of the Platform</h3>
+        <p>
+            The Food Connector platform is designed to connect donors with recipients for the distribution of surplus
+            resources, such as food, goods, and services, in a manner that promotes transparency and fairness.
+        </p>
+
+        <h3>User Responsibilities</h3>
+        <p>
+            Users of the platform agree to:
+        </p>
+        <ul>
+            <li>Provide accurate and truthful information when registering and posting resources.</li>
+            <li>Ensure that donated goods comply with applicable laws and safety standards.</li>
+            <li>Refrain from engaging in fraudulent or malicious activities.</li>
+            <li>Abide by the terms set forth in this agreement and any applicable South African legislation.</li>
+        </ul>
+
+        <h3>Liability</h3>
+        <p>
+            Food Connector will not be held liable for any damages, losses, or disputes arising from the use of the
+            platform. Users assume full responsibility for ensuring the suitability and legality of their transactions.
+            While we strive to verify the authenticity of users, we do not guarantee the quality or legality of the
+            goods or services exchanged.
+        </p>
+
+        <h3>Intellectual Property</h3>
+        <p>
+            All content on this platform, including but not limited to text, graphics, logos, and software, is the
+            property of Food Connector. Unauthorized reproduction, distribution, or modification is strictly prohibited.
+        </p>
+
+        <h3>Termination of Access</h3>
+        <p>
+            Food Connector reserves the right to terminate or suspend your access to the platform if you violate these
+            terms or engage in any activities that harm the platform or its users.
+        </p>
+
+        <h3>Amendments</h3>
+        <p>
+            These terms and conditions may be updated from time to time. Users are encouraged to review this page
+            periodically for changes. Continued use of the platform constitutes acceptance of the updated terms.
+        </p>
+
+        <h3>Governing Law</h3>
+        <p>
+            These terms are governed by the laws of South Africa. Any disputes arising from these terms or the use of
+            the platform will be resolved in the courts of the Republic of South Africa.
+        </p>
+
+        <h3>Contact Information</h3>
+        <p>
+            For questions or concerns about these terms and conditions, please contact us at:
+        </p>
+        <p>
+            Email: <a href="mailto:support@foodconnector.com">support@foodconnector.com</a><br>
+            Phone: +27 (0)123 456 7890
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Food Connector | <a href="mailto:support@foodconnector.com">support@foodconnector.com</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, and 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Safety | Food Connector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="margin-left: 20px;">Food Connector</h1>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'training' %}" class="active">Training & Safety</a></li>
+                <li><a href="{% url 'donors' %}">Donors</a></li>
+                <li><a href="{% url 'recipients' %}">Recipients</a></li>
+                <li><a href="{% url 'liabilities' %}">Legal Liabilities</a></li>
+                <li><a href="{% url 'tax-benefits' %}">Tax Benefits</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li><a href="{% url 'terms' %}">Terms</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Food Safety and Training</h2>
+        <p>Learn how to safely donate and distribute surplus food.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="section" id="training-content">
+        <h2>Ensuring Food Safety</h2>
+        <p>
+            At Food Connector, we prioritize the safety of the food we help redistribute. 
+            Whether you are a donor or a recipient, understanding and following proper food safety guidelines is essential.
+        </p>
+
+        <h3>Why Food Safety Matters</h3>
+        <p>
+            Safe food handling is critical to ensure that surplus food remains healthy and safe for consumption. 
+            Our training resources provide guidance to donors and recipients on how to maintain the quality of food throughout the donation process.
+        </p>
+
+        <h3>Training Programs</h3>
+        <p>
+            We offer comprehensive food safety and handling training tailored to food donors, community organizations, and volunteers.
+        </p>
+        <ul>
+            <li><strong>Food Storage:</strong> Proper storage temperatures and handling techniques to prevent spoilage.</li>
+            <li><strong>Labeling and Tracking:</strong> Ensuring donated food is properly labeled and traceable.</li>
+            <li><strong>Transportation Safety:</strong> Guidelines for safely transporting perishable and non-perishable goods.</li>
+        </ul>
+
+        <h3>Guidelines for Donors</h3>
+        <p>
+            If you’re donating food, here are some basic guidelines to follow:
+        </p>
+        <ul>
+            <li>Ensure that all food is within its “use by” or “best before” date.</li>
+            <li>Store food at appropriate temperatures until it is delivered or picked up.</li>
+            <li>Clearly label all food donations with contents and dates.</li>
+            <li>Follow local health department regulations for prepared and perishable foods.</li>
+        </ul>
+
+        <h3>Training for Recipients</h3>
+        <p>
+            Recipients of food donations can also benefit from our safety training programs. Learn how to:
+        </p>
+        <ul>
+            <li>Inspect and safely accept donated food.</li>
+            <li>Store perishable food to prevent spoilage.</li>
+            <li>Distribute food to communities while maintaining health and safety standards.</li>
+        </ul>
+
+        <h3>Get Started</h3>
+        <p>
+            Ready to learn more about food safety? <a href="{% url 'contact' %}">Contact us</a> for more information on our training programs 
+            and resources tailored to your organization’s needs.
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Food Connector | <a href="mailto:support@foodconnector.com">support@foodconnector.com</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, and 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,3 +1,6 @@
+-- Use the database `food_connector`
+USE food_connector;
+
 CREATE TABLE Donors (
     donor_id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255) NOT NULL,

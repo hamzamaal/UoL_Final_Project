@@ -1,3 +1,5 @@
+-- Use the database `food_connector`
+USE food_connector;
 CREATE TABLE PerishableGoods (
     item_id INT AUTO_INCREMENT PRIMARY KEY,
     donor_id INT NOT NULL,

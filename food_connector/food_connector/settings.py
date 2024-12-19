@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Custom app
     'src',
+    # 'src.models.donors',
 ]
 
 MIDDLEWARE = [

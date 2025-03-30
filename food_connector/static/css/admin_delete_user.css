@@ -101,22 +101,6 @@ tbody td input[type="radio"] {
     cursor: pointer;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    height: 50px; /* Fixed height for the footer */
-    padding: 0; /* Remove extra padding */
-    font-size: 0.8rem; /* Reduce font size */
-    display: flex;
-    align-items: center; /* Vertically center the text */
-    justify-content: center; /* Horizontally center the text */
-}
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
 
 

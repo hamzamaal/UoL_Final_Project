@@ -80,3 +80,37 @@ pip install -r requirements.txt
 - Role-based access control improvements
 - Email/SMS notification integration
 - Graphical analytics dashboard for stakeholders
+
+---
+
+## 🔧 Environment & Setup Instructions
+
+### Export MySQL Environment Variables
+
+```bash
+export MYSQL_HOST=localhost
+export MYSQL_USER=root
+export MYSQL_PASSWORD='M4ndr4k3123!@#'
+export MYSQL_DATABASE=FoodDonationDB
+```
+
+### Insert Admin User into Database
+
+Run the following SQL command in your MySQL console:
+
+```sql
+INSERT INTO User (username, email, password_hash, phone_number, role)
+VALUES (
+  'admin',
+  'admin@example.com',
+  SHA2('password', 256),
+  '0000000000',
+  'Admin'
+);
+```
+
+### Run the Web Server
+
+```bash
+python app.py runserver
+```

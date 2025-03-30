@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
+{# Inherit the base layout (includes header, footer, shared CSS/JS, etc.) #}
+
 {% block title %}About Us - Lend A Hand{% endblock %}
+{# Sets the title of the page in the browser tab #}
 
 {% block content %}
+{# Begin the main content section of the page #}
 
 <!-- Hero Banner -->
 <section class="hero-banner text-white text-start"
          style="background-image: url('https://images.pexels.com/photos/6646948/pexels-photo-6646948.jpeg'); background-size: cover; background-position: center; height: 300px;">
+  <!-- Background image with full width and fixed height -->
   <div class="container h-100 d-flex align-items-end pb-4">
-    <h1 class="fw-bold">About Us</h1>
+    <h1 class="fw-bold">About Us</h1>  {# Page title shown over the image #}
   </div>
 </section>
 
@@ -15,7 +20,8 @@
 <section class="bg-light py-4 text-center">
   <div class="container">
     <p class="text-muted mx-auto" style="max-width: 900px;">
-      Established in 2020 to address widespread food insecurity in South Africa, Lend A Hand connects a world of excess to a world of need by recovering quality edible surplus food from the consumer goods supply chain and distributing it to community organizations that serve the poor. More than 80% of the food received is nutritious. In the 2023/2024 financial year, we distributed 87 million meals and reached 160,000 people daily through a network of 2,500 beneficiary organizations, across South Africa.
+      {# Overview of the organisation's impact, scale, and purpose #}
+      Established in 2020 to address widespread food insecurity in South Africa, Lend A Hand connects a world of excess to a world of need...
     </p>
   </div>
 </section>
@@ -24,19 +30,23 @@
 <section class="py-5 bg-white">
   <div class="container text-center">
     <div class="row g-4 justify-content-center">
+      <!-- Vision Column -->
       <div class="col-md-3">
         <div class="mb-2">
-          <i class="bi bi-eye fs-2 text-success"></i>
+          <i class="bi bi-eye fs-2 text-success"></i>  {# Bootstrap icon for vision #}
         </div>
         <h5 class="fw-bold">Our Vision</h5>
         <p class="text-muted">A South Africa without hunger.</p>
       </div>
+      <!-- Mission Column -->
       <div class="col-md-3">
         <div class="mb-2">
-          <i class="bi bi-bullseye fs-2 text-success"></i>
+          <i class="bi bi-bullseye fs-2 text-success"></i>  {# Bootstrap icon for mission #}
         </div>
         <h5 class="fw-bold text-success">Our Mission</h5>
-        <p class="text-muted">To reduce hunger by safely and cost-effectively securing quality food and making it accessible to those who need it.</p>
+        <p class="text-muted">
+          To reduce hunger by safely and cost-effectively securing quality food and making it accessible to those who need it.
+        </p>
       </div>
     </div>
   </div>
@@ -47,17 +57,19 @@
   <div class="container text-center">
     <h4 class="text-success fw-bold mb-4">What we do</h4>
     <div class="row justify-content-center g-5">
+      <!-- Left Column: Description + Image -->
       <div class="col-md-4">
         <p class="text-muted">
-          One third of all food produced in South Africa is wasted, while millions face daily hunger. We partner with farmers, manufacturers, wholesalers, and retailers to recover quality surplus food and redistribute it.
+          One third of all food produced in South Africa is wasted...
         </p>
         <img src="https://images.pexels.com/photos/6646950/pexels-photo-6646950.jpeg"
              alt="What we do" class="img-fluid mt-3">
       </div>
+      <!-- Right Column: Footprint + Image -->
       <div class="col-md-4">
         <h5 class="text-success fw-bold">Our Footprint</h5>
         <p class="text-muted">
-          Our operations span all nine provinces, ensuring we can serve where food insecurity is most prevalent.
+          Our operations span all nine provinces...
         </p>
         <img src="https://images.pexels.com/photos/3825582/pexels-photo-3825582.jpeg"
              alt="Our Footprint" class="img-fluid mt-3">
@@ -71,7 +83,7 @@
   <div class="container text-center">
     <h5 class="text-success fw-bold mb-4">Our Beneficiary Organisations</h5>
     <p class="text-muted">
-      Our network of registered and vetted beneficiaries includes ECD centres, shelters, and community kitchens. 75% of our BOs focus on developmental work with children, women, the elderly, and vulnerable groups.
+      Our network of registered and vetted beneficiaries includes ECD centres, shelters, and community kitchens...
     </p>
     <img src="https://images.pexels.com/photos/6646954/pexels-photo-6646954.jpeg"
          alt="Beneficiary Stats" class="img-fluid mt-3">
@@ -79,3 +91,4 @@
 </section>
 
 {% endblock %}
+{# End of content block #}

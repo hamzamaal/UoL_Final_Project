@@ -1,40 +1,52 @@
+{# Extend the base template to include the header, footer, and general layout #}
 {% extends 'base.html' %}
 
+{# Set the HTML <title> content for the login page #}
 {% block title %}Login - Food Donation Management{% endblock %}
 
+{# Define the main content block for this page #}
 {% block content %}
+
+<!-- Center the login form within the page -->
 <div class="row justify-content-center mt-5">
     <div class="col-md-6 col-lg-4">
+        <!-- Card container with shadow for styling -->
         <div class="card shadow-lg border-0">
             <div class="card-body">
+
+                <!-- Title of the Login form -->
                 <h2 class="card-title text-center mb-4">Login</h2>
+
+                <!-- Login form: sends POST data to the login route -->
                 <form method="post" action="{{ url_for('auth.login') }}">
 
-                    <!-- Email Input -->
+                    <!-- Email input field -->
                     <div class="mb-3 text-start">
                         <label for="email" class="form-label fw-bold">Email</label>
                         <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
                     </div>
 
-                    <!-- Password Input -->
+                    <!-- Password input field -->
                     <div class="mb-3 text-start">
                         <label for="password" class="form-label fw-bold">Password</label>
                         <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
                     </div>
 
-                    <!-- Submit Button -->
+                    <!-- Login button -->
                     <div class="d-grid">
                         <button type="submit" class="btn btn-success btn-lg">Login</button>
                     </div>
                 </form>
 
-                <!-- Registration Link -->
+                <!-- Link to registration page for users who do not have an account -->
                 <p class="text-center mt-3">
                     Don't have an account? 
                     <a href="{{ url_for('auth.register') }}" class="text-success text-decoration-none">Register here</a>
                 </p>
+
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

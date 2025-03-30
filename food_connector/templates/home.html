@@ -1,16 +1,17 @@
-{% extends 'base.html' %}
-{% block title %}Home - Lend A Hand{% endblock %}
+{% extends 'base.html' %}  {# Extends the main base layout #}
+{% block title %}Home - Lend A Hand{% endblock %}  {# Sets the page title #}
 
 {% block content %}
 
-<!-- ✅ Hero Quote Banner -->
-<section class="position-relative" style="background-image: url('https://images.unsplash.com/photo-1605792657660-596af9009e82?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; height: 400px;">
+<!-- Hero Quote Banner with Background Image and Inspirational Quote -->
+<section class="position-relative"
+         style="background-image: url('https://images.unsplash.com/photo-1605792657660-596af9009e82?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; height: 400px;">
   <div class="container h-100 d-flex flex-column justify-content-end pb-4">
     <h3 class="text-white fw-bold">Poverty is a very complicated issue. Feeding a child isn’t. – Jeff Bridges</h3>
   </div>
 </section>
 
-<!-- ✅ Quick Action Cards -->
+<!-- Quick Action Icons for Key User Engagement Options -->
 <section class="bg-success text-white py-4">
   <div class="container">
     <div class="row text-center">
@@ -34,12 +35,12 @@
   </div>
 </section>
 
-<!-- Stats Section -->
+<!-- Impact Statistics Section with Animated Counters -->
 <section class="stats-section py-5" style="background-color: #f8f9fa;">
   <div class="container">
     <div class="row justify-content-center g-3 align-items-stretch">
       
-      <!-- Card 1 -->
+      <!-- Beneficiary Organisations Stat Card -->
       <div class="col-6 col-md-4 col-lg-2 d-flex">
         <div class="stat-card bg-warning text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
           <img src="{{ url_for('static', filename='icons/beneficiary-orgs.png') }}" class="stat-icon mb-3" alt="Beneficiary Organisations">
@@ -49,7 +50,7 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Beneficiaries Served Stat Card -->
       <div class="col-6 col-md-4 col-lg-2 d-flex">
         <div class="stat-card bg-success text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
           <img src="{{ url_for('static', filename='icons/beneficiaries.png') }}" class="stat-icon mb-3" alt="Beneficiaries Served">
@@ -59,7 +60,7 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Cost Per Meal Stat Card -->
       <div class="col-6 col-md-4 col-lg-2 d-flex">
         <div class="stat-card bg-danger text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
           <img src="{{ url_for('static', filename='icons/cost.png') }}" class="stat-icon mb-3" alt="Cost per meal">
@@ -69,7 +70,7 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
+      <!-- Tons of Food Distributed Stat Card -->
       <div class="col-6 col-md-4 col-lg-2 d-flex">
         <div class="stat-card bg-success text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
           <img src="{{ url_for('static', filename='icons/distribution.png') }}" class="stat-icon mb-3" alt="Tons of Food">
@@ -79,7 +80,7 @@
         </div>
       </div>
 
-      <!-- Card 5 -->
+      <!-- Total Meals Delivered Stat Card -->
       <div class="col-6 col-md-4 col-lg-2 d-flex">
         <div class="stat-card bg-primary text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
           <img src="{{ url_for('static', filename='icons/meals.png') }}" class="stat-icon mb-3" alt="Meals">
@@ -89,9 +90,9 @@
         </div>
       </div>
 
-      <!-- Card 6 -->
+      <!-- Emissions Saved Stat Card -->
       <div class="col-6 col-md-4 col-lg-2 d-flex">
-        <div class="stat-card bg-dark  text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
+        <div class="stat-card bg-dark text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
           <img src="{{ url_for('static', filename='icons/emissions.png') }}" class="stat-icon mb-3" alt="CO2 Saved">
           <div class="stat-divider bg-white"></div>
           <h2 class="stat-number" data-target="7807">0</h2>
@@ -103,14 +104,10 @@
   </div>
 </section>
 
-
-
-<!-- External script -->
+<!-- JavaScript file for animating stat numbers -->
 <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 
-
-
-<!-- ✅ Our Donors Section -->
+<!-- Donor Logos Section -->
 <section class="bg-dark text-white text-center py-5">
   <div class="container">
     <h4 class="fw-bold">Our Top Donors & Partners</h4>
@@ -135,9 +132,4 @@
   </div>
 </section>
 
-
-
-
 {% endblock %}
-
-

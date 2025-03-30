@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Donation Feedback{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/donor_feedback.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center text-success mb-4">View Feedback</h1>
+
+    {% if feedbacks %}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-success">
+                <tr>
+                    <th>Donation ID</th>
+                    <th>Rating</th>
+                    <th>Feedback</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for feedback in feedbacks %}
+                <tr>
+                    <td>{{ feedback.donation_id }}</td>
+                    <td>{{ feedback.rating }}/5</td>
+                    <td>{{ feedback.feedback }}</td>
+                    <td>{{ feedback.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="text-center text-muted">No feedback available for your donations.</p>
+    {% endif %}
+</div>
+{% endblock %}

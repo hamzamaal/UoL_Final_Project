@@ -1,1 +1,0 @@
-from .donors import Donor

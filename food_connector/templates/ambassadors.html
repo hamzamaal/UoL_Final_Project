@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Our Ambassadors - Lend A Hand{% endblock %}
+
+{% block content %}
+  <h1 class="text-success fw-bold mb-4 text-center">Our Ambassadors</h1>
+
+  <p class="lead">
+    Our ambassadors are more than just public figures – they are passionate individuals who use their platforms to advocate for a hunger-free South Africa. Through their efforts, they bring awareness, raise funds, and help us reach vulnerable communities with nutritious meals.
+  </p>
+
+  <div class="row mt-5">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="{{ url_for('static', filename='images/ambassador1.jpg') }}" class="card-img-top" alt="Ambassador 1">
+        <div class="card-body">
+          <h5 class="card-title">Chef Lorna Maseko</h5>
+          <p class="card-text">Celebrity Chef and TV Host, Lorna brings flavor to our mission. She champions food education and the joy of nourishing communities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="{{ url_for('static', filename='images/ambassador2.jpg') }}" class="card-img-top" alt="Ambassador 2">
+        <div class="card-body">
+          <h5 class="card-title">Maps Maponyane</h5>
+          <p class="card-text">Entrepreneur and media personality, Maps is deeply committed to youth empowerment, food security, and social upliftment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="{{ url_for('static', filename='images/ambassador3.jpg') }}" class="card-img-top" alt="Ambassador 3">
+        <div class="card-body">
+          <h5 class="card-title">Palesa Mokubung</h5>
+          <p class="card-text">Founder of Mantsho, Palesa brings creativity and purpose to our cause. She promotes dignity and nutrition for women and children.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <p class="fw-semibold">Would you like to be part of our ambassador programme?</p>
+    <!-- Replace this when the contact route exists -->
+    <a href="#" class="btn btn-success">Contact Us</a>
+    
+  </div>
+{% endblock %}

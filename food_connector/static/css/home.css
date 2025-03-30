@@ -1,0 +1,65 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+    
+  .hero {
+    background: url("../images/hero.jpg") center/cover no-repeat;
+    color: white;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .cta-buttons a {
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+
+  
+.stat-card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+  .stat-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .stat-divider {
+    height: 6px;
+    width: 60%;
+    background-color: white;
+    margin: 0 auto 15px;
+  }
+  .stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  .stat-label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+  }
+  .bg-orange {
+    background-color: #cc4f00;
+  }
+  

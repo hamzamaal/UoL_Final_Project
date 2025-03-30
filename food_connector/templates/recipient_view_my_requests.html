@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}My Requests{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipient_view_my_requests.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="container my-5 flex-grow-1">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-success text-white text-center">
+            <h2 class="m-0">Current Requests</h2>
+        </div>
+        <div class="card-body">
+            {% if requests %}
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Donation ID</th>
+                            <th>Status</th>
+                            <th>Delivery Method</th>
+                            <th>Location</th>
+                            <th>Food Item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for request in requests %}
+                        <tr>
+                            <td>{{ request.donation_id }}</td>
+                            <td>{{ request.status }}</td>
+                            <td>{{ request.delivery_method }}</td>
+                            <td>{{ request.delivery_location }}</td>
+                            <td>{{ request.food_item_name }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <p class="text-center text-muted">No active requests found.</p>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

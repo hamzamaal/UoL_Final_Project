@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Subscribe to our Newsletter{% endblock %}
+
+{% block content %}
+<!-- ✅ Newsletter Section -->
+<section class="newsletter-section text-center py-5">
+  <div class="container">
+    <h2 class="fw-bold">Subscribe to our newsletter</h2>
+    <p class="text-muted">
+      We’re happy you decided to subscribe to our email list.<br>
+      Please take a few seconds and fill in the list details in order to subscribe to our list.<br>
+      You will receive an email to confirm your subscription. Please check your junk mail if you have not received your confirmation email.
+    </p>
+    <form class="newsletter-form mx-auto" style="max-width: 400px;">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email" name="email" required>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Subscribe</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

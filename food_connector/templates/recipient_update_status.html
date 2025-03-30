@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Update Donation Status{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipient_update_status.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="container my-5 flex-grow-1">
+    <div class="form-container card shadow border-0 mx-auto p-4" style="max-width: 500px;">
+        <h2 class="text-center text-success mb-4">Update Donation Status</h2>
+        <form method="POST" action="{{ url_for('recipient.update_request_status') }}">
+            <div class="mb-3">
+                <label for="donation_id" class="form-label">Donation ID</label>
+                <input type="text" class="form-control" id="donation_id" name="donation_id" placeholder="Enter Donation ID" required>
+            </div>
+            <div class="mb-4">
+                <label for="status" class="form-label">New Status</label>
+                <select id="status" name="status" class="form-select" required>
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success w-100">Update Status</button>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

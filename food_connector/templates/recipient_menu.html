@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Recipient Menu{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipient_menu.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+    <div class="recipient-container shadow rounded p-4 bg-white mx-auto">
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="mb-4">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <!-- Welcome Message -->
+        {% if recipient_name %}
+        <p class="welcome-message">Welcome, {{ recipient_name }}!</p>
+        {% else %}
+        <p class="welcome-message">Welcome, Recipient!</p>
+        {% endif %}
+
+        <!-- Recipient Menu -->
+        <h2 class="text-center text-success">Recipient Menu</h2>
+        <ul class="list-unstyled text-center mt-4">
+            {% if not has_organization %}
+            <li>
+                <a href="/recipient/create-organization" class="btn btn-outline-success w-100 mb-2">Create Organization</a>
+            </li>
+            {% else %}
+            <li class="text-muted mb-2">
+                <p>You have already registered an organization.</p>
+            </li>
+            {% endif %}
+
+            <li><a href="/recipient/view-available-donations" class="btn btn-outline-success w-100 mb-2">View Available Donations</a></li>
+            <li><a href="/recipient/request-donation" class="btn btn-outline-success w-100 mb-2">Request a Donation</a></li>
+            <li><a href="/recipient/view-my-requests" class="btn btn-outline-success w-100 mb-2">View My Requests</a></li>
+            <li><a href="/recipient/view-request-history" class="btn btn-outline-success w-100 mb-2">View Request History</a></li>
+            <li><a href="/recipient/update-status" class="btn btn-outline-success w-100 mb-2">Update Donation Status</a></li>
+            <li><a href="/recipient/notifications" class="btn btn-outline-success w-100 mb-2">View Notifications</a></li>
+            <li><a href="/recipient/add-feedback" class="btn btn-outline-success w-100 mb-2">Add Feedback</a></li>
+            <li><a href="/logout" class="btn btn-danger w-100">Logout</a></li>
+        </ul>
+    </div>
+</main>
+{% endblock %}

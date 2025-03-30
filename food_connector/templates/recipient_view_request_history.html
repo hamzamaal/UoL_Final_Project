@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Request History{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipient_view_request_history.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="container my-5 flex-grow-1">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-success text-white text-center">
+            <h2 class="m-0">Request History</h2>
+        </div>
+        <div class="card-body">
+            {% if history %}
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Donation ID</th>
+                            <th>Status</th>
+                            <th>Delivery Method</th>
+                            <th>Location</th>
+                            <th>Food Item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for record in history %}
+                        <tr>
+                            <td>{{ record.donation_id }}</td>
+                            <td>{{ record.status }}</td>
+                            <td>{{ record.delivery_method }}</td>
+                            <td>{{ record.delivery_location }}</td>
+                            <td>{{ record.food_item_name }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <p class="text-center text-muted">No historical requests found.</p>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

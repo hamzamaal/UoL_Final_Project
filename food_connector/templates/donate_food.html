@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Donate Food{% endblock %}
+
+{% block content %}
+<!-- Donate Food Hero Section -->
+<section class="donate-food-hero text-white py-5 text-center"
+         style="background: url('https://images.pexels.com/photos/6646961/pexels-photo-6646961.jpeg') no-repeat center center / cover;">
+  <div class="container">
+    <h1 class="display-5 fw-bold">DONATE<br>FOOD</h1>
+  </div>
+</section>
+
+<!-- Donate Food Form & Info -->
+<section class="donate-food-content py-5">
+  <div class="container d-md-flex gap-5">
+    <div class="flex-fill">
+      <img src="https://images.pexels.com/photos/4503290/pexels-photo-4503290.jpeg" class="img-fluid mb-3" alt="Warehouse">
+      <p>Donating food that has lost its commercial value but is still perfectly fit for human consumption benefits everyone, including our fragile planet.</p>
+      <p>At Lend A Hand we work with all types of supply chain partners such as farmers, manufacturers, retailers, wholesalers, and more to recover good quality, edible surplus food for redistribution.</p>
+      <ul>
+        <li>To offset costs by receiving tax certificates for donations</li>
+        <li>To reduce dumping and reverse waste logistics costs</li>
+        <li>To reduce the impact on the environment and mitigate climate change</li>
+        <li>To improve your ESG profile</li>
+        <li>To be a good corporate citizen and do the right thing</li>
+      </ul>
+      <p><a href="#">Click here to download our Food Donation Guidelines</a></p>
+    </div>
+    <div class="flex-fill">
+      <form class="bg-light p-4 shadow rounded">
+        <h5 class="mb-3">Fill in the form and our team will contact you:</h5>
+        <input type="text" class="form-control mb-2" placeholder="Name & Surname">
+        <input type="email" class="form-control mb-2" placeholder="Email Address">
+        <input type="tel" class="form-control mb-2" placeholder="Phone Number">
+        <input type="text" class="form-control mb-2" placeholder="Address">
+        <select class="form-control mb-2">
+          <option disabled selected>Type of Organization</option>
+          <option>Retailer</option>
+          <option>Manufacturer</option>
+          <option>Farmer</option>
+          <option>Wholesaler</option>
+        </select>
+        <textarea class="form-control mb-2" placeholder="Description of Surplus Food"></textarea>
+        <input type="date" class="form-control mb-3" placeholder="Preferred Collection Date">
+        <button type="submit" class="btn btn-success w-100">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

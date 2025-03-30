@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block title %}Home - Lend A Hand{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Quote Banner -->
+<section class="position-relative" style="background-image: url('https://images.unsplash.com/photo-1605792657660-596af9009e82?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; height: 400px;">
+  <div class="container h-100 d-flex flex-column justify-content-end pb-4">
+    <h3 class="text-white fw-bold">Poverty is a very complicated issue. Feeding a child isn’t. – Jeff Bridges</h3>
+  </div>
+</section>
+
+<!-- ✅ Quick Action Cards -->
+<section class="bg-success text-white py-4">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3">
+        <i class="bi bi-people-fill fs-2 mb-2"></i>
+        <h6 class="text-uppercase">Volunteer</h6>
+      </div>
+      <div class="col-md-3 border-start border-end">
+        <i class="bi bi-currency-dollar fs-2 mb-2"></i>
+        <h6 class="text-uppercase">Donate Funds</h6>
+      </div>
+      <div class="col-md-3 border-end">
+        <i class="bi bi-box-seam fs-2 mb-2"></i>
+        <h6 class="text-uppercase">Donate Food</h6>
+      </div>
+      <div class="col-md-3">
+        <i class="bi bi-pencil-square fs-2 mb-2"></i>
+        <h6 class="text-uppercase">Apply</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="row justify-content-center g-3 align-items-stretch">
+      
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="stat-card bg-warning text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
+          <img src="{{ url_for('static', filename='icons/beneficiary-orgs.png') }}" class="stat-icon mb-3" alt="Beneficiary Organisations">
+          <div class="stat-divider"></div>
+          <h2 class="stat-number" data-target="352">0</h2>
+          <p class="stat-label">Beneficiary<br>Organisations</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="stat-card bg-success text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
+          <img src="{{ url_for('static', filename='icons/beneficiaries.png') }}" class="stat-icon mb-3" alt="Beneficiaries Served">
+          <div class="stat-divider"></div>
+          <h2 class="stat-number" data-target="5873">0</h2>
+          <p class="stat-label">Beneficiaries<br>Served Daily</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="stat-card bg-danger text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
+          <img src="{{ url_for('static', filename='icons/cost.png') }}" class="stat-icon mb-3" alt="Cost per meal">
+          <div class="stat-divider"></div>
+          <h2 class="stat-number" data-target="5.50">R0.00</h2>
+          <p class="stat-label">Cost Per Meal</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="stat-card bg-success text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
+          <img src="{{ url_for('static', filename='icons/distribution.png') }}" class="stat-icon mb-3" alt="Tons of Food">
+          <div class="stat-divider"></div>
+          <h2 class="stat-number" data-target="732">0</h2>
+          <p class="stat-label">Tons of Food<br>Distributed</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="stat-card bg-primary text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
+          <img src="{{ url_for('static', filename='icons/meals.png') }}" class="stat-icon mb-3" alt="Meals">
+          <div class="stat-divider"></div>
+          <h2 class="stat-number" data-target="28760">0</h2>
+          <p class="stat-label">Meals</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="stat-card bg-dark  text-center p-4 w-100 d-flex flex-column justify-content-between text-white">
+          <img src="{{ url_for('static', filename='icons/emissions.png') }}" class="stat-icon mb-3" alt="CO2 Saved">
+          <div class="stat-divider bg-white"></div>
+          <h2 class="stat-number" data-target="7807">0</h2>
+          <p class="stat-label">Tons of CO₂<br>Emissions Avoided</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- External script -->
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+
+
+<!-- ✅ Our Donors Section -->
+<section class="bg-dark text-white text-center py-5">
+  <div class="container">
+    <h4 class="fw-bold">Our Top Donors & Partners</h4>
+    <p class="text-light mb-4">Thank you to our top financial, food, and in-kind donors who contribute to our vision of creating a South Africa without hunger.</p>
+    <div class="row justify-content-center g-4">
+      <div class="col-4 col-md-2">
+        <img src="{{ url_for('static', filename='icons/Food-Lovers-Logo.jpg') }}" class="img-fluid" alt="Nestlé">
+      </div>
+      <div class="col-4 col-md-2">
+        <img src="{{ url_for('static', filename='icons/shoprite-logo.svg') }}" class="img-fluid" alt="PepsiCo">
+      </div>
+      <div class="col-4 col-md-2">
+        <img src="{{ url_for('static', filename='icons/checkers-logo.png') }}" class="img-fluid" alt="Pick n Pay">
+      </div>
+      <div class="col-4 col-md-2">
+        <img src="{{ url_for('static', filename='icons/pnp-logo.jpeg') }}" class="img-fluid" alt="Shoprite">
+      </div>
+      <div class="col-4 col-md-2">
+        <img src="{{ url_for('static', filename='icons/tiger-brands.jpeg') }}" class="img-fluid" alt="Unilever">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock %}
+
+
